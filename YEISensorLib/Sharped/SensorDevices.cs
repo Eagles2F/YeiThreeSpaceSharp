@@ -15,9 +15,14 @@ namespace YEISensorLib.Sharped
         /// <returns></returns>
         public static SensorDevice GetFirstAvailable()
         {
-            var port = ThreeSpaceInterop.GetComPort(0);
-            if(port != null) return new SensorDevice((ComPort)port);
-            return null;
+            //var port = ThreeSpaceInterop.GetComPort(0);
+           var port = new ComPort();
+            port.PortName = "COM3";
+            port.SensorType = SensorTypeEnum.Unknown;
+            port.FriendlyName = "BLUE";
+            return new SensorDevice((ComPort)port);
+            //if(port != null) return new SensorDevice((ComPort)port);
+            //return null;
         }
 
         /// <summary>

@@ -32,7 +32,7 @@ namespace YEISensor.ConsoleTest
                     Console.WriteLine("Gyro:        {0:0.000},{1:0.000},{2:0.000}", device.Gyro.X, device.Gyro.Y, device.Gyro.Z);
                     Console.WriteLine("Accel:       {0:0.000},{1:0.000},{2:0.000}", device.Accelerometer.X, device.Accelerometer.Y, device.Accelerometer.Z);
                     Console.WriteLine("Compass:     {0:0.000},{1:0.000},{2:0.000}", device.Compass.X, device.Compass.Y, device.Compass.Z);
-
+                   
 
                     var color = new Color
                                     {

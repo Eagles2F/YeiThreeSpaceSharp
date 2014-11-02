@@ -59,7 +59,7 @@ namespace YEISensorLib.Sharped
         {
             _port = port;
             _deviceId = ThreeSpaceInterop.CreateDevice(port.PortName, TimeStampModeEnum.Sensor);
-            IsConnected = _deviceId != Defines.NO_DEVICE_ID;
+           IsConnected = _deviceId != Defines.NO_DEVICE_ID;
             if (IsConnected)
             {
                 LoadSerialNumber();

@@ -102,9 +102,18 @@ namespace YEISensorLib.RawApi
         public static ComPort? GetComPort(uint index)
         {
             var result = new ComPort();
+            result.SensorType = SensorTypeEnum.BlueTooth;
+            result.PortName =
+                "COM3";
+            result.FriendlyName =
+                "COM3";
+            return result;
+            /*
             var nFound = GetAvailableComPortRaw(ref result, 1, index, (uint)FilterEnum.AnyKnown);
+            Console.WriteLine(nFound);
             if (nFound == 0) return null;
             return result;
+             * */
         }
 
 
